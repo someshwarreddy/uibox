@@ -1,0 +1,33 @@
+<div class="container margin-left">
+    <div class="all-sections">
+        <section class="main-section gallery">
+            <h1>Product image gallery</h1>
+            <div class="card">
+                <div class="images-section">
+                    <div class="full-img">
+                        <img class="displayed-img" src="assets/pic1.jpg" alt="Closeup of a human eye">
+                    </div>
+                    <div class="thumb-bar">
+                        <img *ngFor="let Image of images index as i" src="assets/{{Image}}" class="thumb-bar-image"
+                            (click)="changeImage($event,Image)">
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="company">company</p>
+                    <h2>Heading</h2>
+                    <p class="descreption"> Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Amet, unde libero. Dolore, exercitationem,
+                        illum amet corporis labore fuga facilis qui rerum cupiditate dolor deserunt soluta quam officia
+                        ex
+                        nemo ab?</p>
+                    <div> <button type="button" class="button add-to-cart">Addtocart</button>
+                        <button class="button buy">shopmore</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="right-section">
+         
+        </section>
+    </div>
+</div>

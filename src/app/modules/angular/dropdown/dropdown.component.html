@@ -1,0 +1,19 @@
+<div class="container margin-left">
+    <div class="all-sections">
+        <div class="main-section">
+            <div class="serach-dropdown">
+                <div class="dropdown" (click)="dropdownToggle()">
+                    {{selectedRegion}}
+                </div>
+                <div class="dropdown-content" *ngIf="dropDownisopen">
+                    <div *ngFor="let region of regionArray">
+                        <span (click)="selectRegion(region)">{{region}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="right-section">
+           
+        </section>
+    </div>
+</div>

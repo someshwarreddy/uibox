@@ -1,0 +1,8 @@
+<div class="container">
+    <section class="main-section">
+        <div *ngFor="let cssitem of data">
+            <a [routerLink]="['cssitem', cssitem.name]">{{cssitem.name}}</a>
+            <p>{{cssitem.code}}</p>
+        </div>
+    </section>
+</div> 

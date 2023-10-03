@@ -1,0 +1,125 @@
+<div class="container margin-left">
+    <div class="all-sections">
+        <section class="main-section ">
+            <button class="section-button">one <img class="icon" src="/assets/icon-next.svg" alt=""></button>
+            <div class="content active">
+                <div class="inner"> content1</div>
+            </div>
+            <button class="section-button">two <img class="icon" src="/assets/icon-next.svg" alt=""></button>
+            <div class="content">
+                <div class="inner"> content2</div>
+            </div>
+            <button class="section-button">three <img class="icon" src="/assets/icon-next.svg" alt=""></button>
+            <div class="content">
+                <div class="inner"> content3</div>
+            </div>
+            <h3 class="block-heading">html</h3>
+            <div class="code-block html-block">
+                <div >&lt;button class="accordian-button">one &lt;img class="icon" src="/assets/icon-next.svg"
+                    alt="">&lt;/button>
+                </div>
+                <div>
+                    &lt;div class="content active">
+                    &lt;div class="inner"> contentone&lt;/div>
+                    &lt;/div>
+                </div>
+                <div>&lt;button class="accordian-button">two &lt;img class="icon" src="/assets/icon-next.svg"
+                    alt="">&lt;/button>
+                </div>
+                <div>
+                    &lt;div class="content active">
+                    &lt;div class="inner"> contenttwo&lt;/div>
+                    &lt;/div>
+                </div>
+                <div>&lt;button class="accordian-button">three &lt;img class="icon" src="/assets/icon-next.svg"
+                    alt="">&lt;/button>
+                </div>
+                <div>
+                    &lt;div class="content active">
+                    &lt;div class="inner"> contentthree&lt;/div>
+                    &lt;/div>
+                </div>
+            </div>
+
+            <h3 class="block-heading">css</h3>
+
+            <div class="code-block">
+                <div class="css"> {{'.accordian-button {
+                    display: block;
+                    width: 100%;
+                    outline: unset;
+                    border: none;
+                    padding: 1rem;
+                    cursor: pointer;
+                    text-align: left;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    margin: 10px 0 0;
+                    }'}}
+                </div>
+                <div class="css"> {{ ' .content {
+                    height: 0;
+                    -webkit-transition: height 1s ease;
+                    transition: height 0.5s ease;
+                    background-color: aquamarine;
+                    overflow: hidden;
+                    }'}}
+                </div>
+                <div class="css">
+                    {{'.content.active {
+                    min-height: 200px;
+                    } '}}
+                </div>
+
+                <div class="css">
+                    {{'.inner {
+                    margin: 16px;
+                    }'}}
+                </div>
+                <div class="css">
+                    {{'.icon {
+                    transform: rotate(90deg);
+                    -webkit-transition: transform 1s ease;
+                    transition: transform 0.5s ease;
+                    float: right;
+                    }'}}
+                </div>
+
+                <div class="css">
+                    {{'.icon.active {
+                    transform: rotate(270deg);
+                    }'}}
+                </div>
+            </div>
+            <h3 class="block-heading">.ts</h3>
+            <div class="code-block">
+                <div class="ts-block"> {{'import { Component, OnInit, Renderer2 } from &lsquo;@angular/core&rsquo;;'}}</div>
+                <div class="ts-block"> {{'@Component({'}}</div>
+                <div class="ts-block">{{ ' selector: &lsquo; app-accordian &rsquo;,'}}</div>
+                <div class="ts-block"> {{'templateUrl: &lsquo; ./accordian.component.html&rsquo;,'}}</div>
+                <div class="ts-block"> {{'styleUrls: [&lsquo;./accordian.component.scss&rsquo;] })' }}</div>
+                <div class="ts-block">{{'export class AccordianComponent implements OnInit {'}}</div>
+                <div class="ts-block">{{' btns: any;contentDiv: any;contentIcon: any;'}}</div>
+                <div class="ts-block">{{' constructor(public renderer: Renderer2) { }'}}</div>
+                <div class="ts-block">{{' ngOnInit(): void {'}}</div>
+                <div class="ts-block">{{' this.btns = document.querySelectorAll(&lsquo;.accordian-button&rsquo;)'}}</div>
+                <div class="ts-block">{{'this.contentDiv = document.querySelectorAll(&lsquo;.content&rsquo;);'}}</div>
+                <div class="ts-block"> {{' this.contentIcon = document.querySelectorAll(&lsquo;.icon&rsquo;);'}}</div>
+                <div class="ts-block">{{' this.contentIcon[0].classList.add(&lsquo;active&rsquo;);'}}</div>
+                <div class="ts-block">{{' this.btns.forEach((btn: any, index: any) => {'}}</div>
+                <div class="ts-block"> {{'this.renderer.listen(btn, (&lsquo;click&rsquo;, () => {'}}</div>
+                <div class="ts-block"> {{' this.contentDiv.forEach((contentDiv: { classList: { remove: (arg0: string) => any; }; }) =>
+                    contentDiv.classList.remove(&lsquo;active&rsquo;));'}}</div>
+                <div class="ts-block"> {{' this.contentDiv[index].classList.toggle(&lsquo;active&rsquo;); '}}</div>
+                <div class="ts-block"> {{ ' this.contentIcon.forEach((contenticon: { classList: { remove: (arg0: string) => any; }; }) =>
+                    contenticon.classList.remove(&lsquo;active&rsquo;));'}}</div>
+                <div class="ts-block"> {{ ' this.contentIcon[index].classList.add(&lsquo;active&rsquo;);'}}</div>
+                <div class="ts-block"> {{ ' });'}}</div>
+                <div class="ts-block"> {{ ' })'}}</div>
+            </div>
+        </section>
+        <section class="right-section">
+
+        </section>
+    </div>
+</div>

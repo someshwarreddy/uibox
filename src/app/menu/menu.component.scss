@@ -1,0 +1,35 @@
+.navbar-header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    z-index: 1;
+    background-color: #d6ebf4;
+    min-height: 40px ;
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    padding: .5rem;
+    font-size: 1rem;
+    color: #0a3442;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+
+.navbar-brand,
+.navbar-list-item {
+    margin-right: 1rem;
+}
+
+.navbar-list-item {
+    list-style: none;
+}

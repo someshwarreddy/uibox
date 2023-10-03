@@ -1,0 +1,41 @@
+.navbar-header {
+    margin-top: 2.5rem;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    background-color: #d6ebf4;
+    position: fixed;
+    width: 200px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    height: 100%;
+    // margin-right: 1rem;
+}
+
+.navbar,
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    padding: .5rem;
+    font-size: 1rem;
+    color: #0a3442;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+}
+
+.navbar-brand,
+.navbar-list-item {
+    margin-right: 1rem;
+}
+
+.navbar-list-item {
+    list-style: none;
+}
