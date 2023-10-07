@@ -9,9 +9,11 @@
     font-size: 1rem;
     text-transform: capitalize;
     margin: 10px 10px 0 0;
+    background-color: rgb(122, 120, 116);
+
 }
 .tabs-button.active{
-   background-color:aquamarine ; 
+   background-color: rgb(240, 240, 240);
 }
 .tabs-button:last-child{
     margin-right: 0;
@@ -20,7 +22,7 @@
     height: 0;
     -webkit-transition: height 1s ease;
     transition: height 0.5s ease;
-    background-color: aquamarine;
+    background-color:rgb(240, 240, 240);
     overflow: hidden;
  
 }

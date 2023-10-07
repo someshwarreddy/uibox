@@ -11,9 +11,75 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <h3 class="block-heading">html</h3>
+            <div class="code-block html-block">
+                <div>
+                    &lt;div class="dropdown" (click)="dropdownToggle()">
+                    {{'{{selectedRegion}}'}}
+                    &lt;/div>
+                </div>
+                <div>
+                    &lt;div class="dropdown-content" *ngIf="dropDownisopen"><br>
+                    &lt;div *ngFor="let region of regionArray"><br>
+                    &lt;span (click)="selectRegion(region)">{{'{{region}}'}} &lt;/span><br>
+                    &lt;/div><br>
+                    &lt;/div>
+                </div>
+            </div>
+            <h3 class="block-heading">css</h3>
+
+            <div class="code-block">
+                <div class="css"> {{'.dropdown, .dropdown-content {
+                        min-width: 120px;
+                        max-width: 150px;
+                        width: 100%;
+                        padding: .5rem;
+                        border-radius: 5px;
+                        box-shadow: 0 -0.1em 0.2em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+                            0.1px 0.1em .4em rgba(0, 0, 0, 0.3);
+                        background: #fff;
+                        height: auto;
+                        transition: height 2s ease-in-out;
+                        color: rgba(0, 0, 0, 1) !important;
+                    }'}}
+                </div>
+                <div class="css"> {{' .dropdown {
+                        margin-bottom: 0.3rem; 
+                        cursor: pointer; 
+                    }'
+                   }}
+                </div>
+                <div class="css"> {{'.dropdown-content {
+                        position: absolute; 
+                        z-index: 1; 
+                        cursor: pointer; 
+                    }'}}
+                </div>     
+            </div>
+            <h3 class="block-heading">.ts</h3>
+            <div class="code-block">
+                <div class="ts-block"> {{'import { Component, HostListener } from &lsquo;@angular/core&rsquo;;'}}
+                </div>
+                <div class="ts-block"> {{'@Component({'}}</div>
+                <div class="ts-block">{{ ' selector: &lsquo; app-dropdown &rsquo;,'}}</div>
+                <div class="ts-block"> {{'templateUrl: &lsquo; ./dropdown.component.html&rsquo;,'}}</div>
+                <div class="ts-block"> {{'styleUrls: [&lsquo;./dropdown.component.scss&rsquo;] })' }}</div>
+                <div class="ts-block">{{'export class dropdownComponent  {'}}</div>
+                <div class="ts-block">dropDownisopen: boolean = false;regionArray = [&lsquo;item1', 'item2', 'item3', 'item4', 'item5', 'item6'];selectedRegion: string = 'selectitem';
+                </div>
+                <div class="ts-block">{{' dropdownToggle() {'}}<br>
+                {{' this.dropDownisopen = !this.dropDownisopen;'}}<br>}</div>
+                <div class="ts-block">{{' selectRegion(selectedRegion: string) {'}}<br>
+                {{' this.selectedRegion = selectedRegion;'}}<br> {{'this.dropDownisopen = false;'}}<br>}</div>
+                <div class="ts-block">@HostListener(&lsquo;document:click&rsquo;, [$event.target'])</div>
+                <div class="ts-block">{{'onClick(target: any) {'}}</div>
+                <div class="ts-block">{{'  const isDropdownclicked = target.querySelector(&lsquo;.dropdown&rsquo;);'}}</div>
+                <div class="ts-block">{{' if (isDropdownclicked) {
+                    this.dropDownisopen = false;
+                  }'}}
+                <br>}<br>}</div>
         <section class="right-section">
-           
+
         </section>
     </div>
 </div>

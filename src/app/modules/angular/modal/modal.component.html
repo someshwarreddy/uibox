@@ -17,9 +17,119 @@
                     </div>
                 </div>
             </div>
+            <h3 class="block-heading">html</h3>
+            <div class="code-block html-block">
+                <div>
+                    &lt;button type="button" class="button-open">open modal &lt;/button>
+                </div>
+                <div>
+                    <div> &lt;div class="modal"></div>
+                    <div> &lt;div class="modal-content"></div>
+                    <div> &lt;div class="inside-content"></div>
+                    <div> &lt;h2 class="modal-name">Name &lt;/h2></div>
+                    <div> &lt;button type="button" class="close-button">close &lt;/button></div>
+                    <div> &lt;/div></div>
+                    <div> &lt;div>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita exercitationem ex,
+                        repellendus
+                        similique enim quo quibusdam autem officiis? Dolore, iste numquam. Praesentium perspiciatis
+                        libero
+                        autem? Cupiditate, ipsam. Adipisci, quia nemo?
+                        &lt;/div></div>
+                    <div> &lt;/div></div>
+                    <div> &lt;/div></div>
+                </div>
+            </div>
+            <h3 class="block-heading">css</h3>
+            <div class="code-block">
+                <div class="css"> {{'.modal {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: transparent;
+                    z-index: 1;
+                    }'}}
+                </div>
+                <div class="css"> {{'button {
+                    background: unset;
+                    border: 0;
+                    outline: unset;
+                    cursor: pointer;
+                    }'}}
+                </div>
+                <div class="css"> {{'.button-open {
+                    z-index: 1;
+                    border: 1px solid #d5cfcf;
+                    padding: 1rem 2rem;
+                    text-transform: capitalize;
+                    }'}}
+                </div>
+                <div class="css"> {{' .modal-content {
+                    position: absolute;
+                    background-color: rgb(255, 255, 255);
+                    height: 0;
+                    max-width: 0;
+                    -webkit-transition: transform 0.5s ease-out;
+                    transition: transform 0.5s ease-out;
+                    overflow: hidden;
+                    transform: translate(0%, -10%);
+                    z-index: 3;
+
+                    }'}}
+                </div>
+                <div class="css"> {{'
+                    .modal-content.active {
+                    height: calc(100% - 25vmax);
+                    max-width: calc(100% - 10vmax);
+                    aspect-ratio: 16/9;
+                    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+                    margin: 0 auto;
+                    transform: translate(0%, 30%);
+                    border-radius: 5px;
+                    top: 0%;
+                    border: ipx solid #eee;
+                    padding: 1rem;
+                    z-index: 1;
+                    }'}}
+                </div>
+                <div class="css"> {{'.inside-content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-bottom: 1rem;
+                    }'}}
+                </div>
+                <div class="css"> {{'.modal-name {
+                    margin: 0;
+                    }'}}
+                </div>
+                </div>
+                <h3 class="block-heading">.ts</h3>
+                <div class="code-block">
+                    <div class="ts-block"> {{'import { Component, OnInit, Renderer2 } from &lsquo;@angular/core&rsquo;;'}}
+                    </div>
+                    <div class="ts-block"> {{'@Component({'}}</div>
+                    <div class="ts-block">{{ ' selector: &lsquo; app-modal &rsquo;,'}}</div>
+                    <div class="ts-block"> {{'templateUrl: &lsquo; ./modal.component.html&rsquo;,'}}</div>
+                    <div class="ts-block"> {{'styleUrls: [&lsquo;./image-gallerymodal.component.css&rsquo;] })' }}</div>
+                    <div class="ts-block">{{'export class ModalComponentimplements OnInit {'}}</div>
+                    <div class="ts-block">{{'   buttonOpen:any; modalActive:any; closeButton :any;'}}
+                    </div>
+                    <div class="ts-block">{{' constructor(public renderer: Renderer2) { }'}}</div>
+                    <div class="ts-block">{{' ngOnInit(): void {'}}</div>
+                    <div class="ts-block">{{'this.buttonOpen =document.querySelector(&lsquo;.button-open&rsquo;)'}}</div>
+                    <div class="ts-block">{{' this.thumbarImage = document.querySelector(&lsquo;.modal-content &rsquo;);'}}</div>
+                    <div class="ts-block"> {{' this.closeButton = document.querySelector(&lsquo;.close-button&rsquo;);'}}</div>
+                    <div class="ts-block"> {{' this.renderer.listen(this.left, &lsquo;click &rsquo;, () => {'}}</div>
+                    <div class="ts-block"> {{'this.modalActive.classList.add(&lsquo;active&rsquo;)'}}</div>
+                    <div class="ts-block"> {{'   });'}}</div>
+                    <div class="ts-block"> {{' this.renderer.listen(this.left, &lsquo;click &rsquo;, () => {'}}</div>
+                    <div class="ts-block"> {{' this.modalActive.classList.remove(&lsquo;active&rsquo;)'}}</div>
+                    <div class="ts-block"> {{'  });'}}<br>}</div>
+                </div>
+            </div>
+            <section class="right-section">
+
+            </section>
         </div>
-        <section class="right-section">
-          
-        </section>
     </div>
-</div>

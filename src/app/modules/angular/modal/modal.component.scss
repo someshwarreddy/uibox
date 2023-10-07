@@ -5,6 +5,7 @@
     background-color: transparent;
     /* overflow-x: hidden;
     overflow-y: auto; */
+    z-index: 1;
 }
 
 button {
@@ -32,6 +33,7 @@ button {
     overflow: hidden;
     transform: translate(0%, -10%);
     z-index: 3;
+   
 }
 
 .modal-content.active {
@@ -49,12 +51,14 @@ button {
     top: 0%;
     border: ipx solid #eee;
     padding: 1rem;
+    z-index: 1;
 }
 
 .inside-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
 .modal-name {

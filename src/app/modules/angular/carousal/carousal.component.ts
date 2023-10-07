@@ -34,7 +34,7 @@ export class CarousalComponent implements OnInit {
     this.renderer.listen(this.right, 'click', () => {
       this.currentSlideIndex++;
       this.showSlide();
-      this.resetInterval()
+      this.resetInterval();
     })
 
   }
@@ -52,11 +52,11 @@ export class CarousalComponent implements OnInit {
 
   autoSlide() {
     this.currentSlideIndex++;
-    this.showSlide()
+    this.showSlide();
   }
   
   resetInterval() {
-    clearInterval(this.interval)
+    clearInterval(this.interval);
     this.interval = setInterval(this.autoSlide.bind(this), 2000);
   }
 
