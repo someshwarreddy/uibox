@@ -1,7 +1,7 @@
 <div class="container margin-left">
-    <h1>angular carousal</h1>
     <div class="all-sections">
         <section class="main-section gallery">
+            <h1>angular carousal</h1>
             <div class="slider-container">
                 <div class="slider">
                     <div class="img active">
@@ -175,14 +175,17 @@
                 <div class="ts-block"> {{ ' this.currentSlideIndex = 0;'}}</div>
                 <div class="ts-block"> {{ ' } else if (this.currentSlideIndex < 0) {'}}</div>
                         <div class="ts-block"> {{ ' this.currentSlideIndex = this.slides.length - 1; }'}}</div>
-                        <div class="ts-block"> {{ ' this.slides.forEach((slide: any) =>slide.classList.remove(&lsquo;active&rsquo;));'}}</div>
-                        <div class="ts-block"> {{ ' this.slides[this.currentSlideIndex].classList.add(&lsquo;active&rsquo;)'}}<br>}</div>
+                        <div class="ts-block"> {{ ' this.slides.forEach((slide: any)
+                            =>slide.classList.remove(&lsquo;active&rsquo;));'}}</div>
+                        <div class="ts-block"> {{ '
+                            this.slides[this.currentSlideIndex].classList.add(&lsquo;active&rsquo;)'}}<br>}</div>
                         <div class="ts-block"> {{ ' autoSlide() {'}}</div>
                         <div class="ts-block"> {{ ' this.currentSlideIndex++; '}}</div>
-                        <div class="ts-block"> {{ ' this.showSlide() '}}<br>  }</div>
+                        <div class="ts-block"> {{ ' this.showSlide() '}}<br> }</div>
                         <div class="ts-block"> {{ 'resetInterval() { '}}</div>
-                        <div class="ts-block"> {{ '  clearInterval(this.interval) '}}</div>
-                        <div class="ts-block"> {{ '  this.interval = setInterval(this.autoSlide.bind(this), 2000); '}}<br> } <br>}</div>
+                        <div class="ts-block"> {{ ' clearInterval(this.interval) '}}</div>
+                        <div class="ts-block"> {{ ' this.interval = setInterval(this.autoSlide.bind(this), 2000);
+                            '}}<br> } <br>}</div>
                 </div>
 
         </section>
